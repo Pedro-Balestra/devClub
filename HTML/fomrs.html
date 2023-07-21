@@ -7,7 +7,7 @@
         - GET
         - POST
 -->
-<form>
+<form action="" method="" enctype="multipart/form-data">
     <h1>Digite seu endereço</h1>
     <label>
         Rua:
@@ -17,6 +17,15 @@
         Numero:
         <input type="number" name="numero">
     </label>
+    <label>
+        Email:
+        <input type="email" name="email">
+    </label>
+    <label>
+        Foto:
+        <input type="file" name="file">
+    </label>
 
-    <button>Enviar dados</button>
+    <button type="reset">reset</button>
+    <button type="submit">Enviar dados</button>
 </form>
