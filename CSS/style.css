@@ -1,6 +1,12 @@
-.texto,
-.botao,
-p,
-#segundo-botao {
-    color: red;
-}
+/* 
+    Unidades de Medidas
+
+    -> Absolutas
+        px (pixels)
+        in (inches/polegadas)
+        cm / mm (centimetro / milimetro)
+
+    -> Relativas
+        % calcula o tamanho relativo ao elemento pai
+        vw (view width) 1vw é 1% da largura da janela do navegador
+*/
