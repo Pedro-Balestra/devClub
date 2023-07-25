@@ -1,14 +1,6 @@
-h1 {
+.texto,
+.botao,
+p,
+#segundo-botao {
     color: red;
-    background: black;
-}
-
-p {
-    color: blue;
-    font-size: 20px;
-}
-
-button {
-    background: green;
-    border-color: darkgreen;
 }
