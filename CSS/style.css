@@ -1,15 +1,22 @@
-/* 
-    Unidades de Medidas
+h1 {
+    color: red;
+    font-size: 64px;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    text-shadow: 10px 5px 15px #FF0000;
+}
 
-    -> Absolutas
-        px (pixels)
-        in (inches/polegadas)
-        cm / mm (centimetro / milimetro)
-
-    -> Relativas
-        % calcula o tamanho relativo ao elemento pai
-        vw (view width) 1vw é 1% da largura da janela do navegador
-        vh (view height) 1vh é 1% da altura da janela do navegador
-        em é unidade relativa ao elemento pai
-        rem é unidade relativa ao elemento raiz
-*/
+p {
+    color: blue;
+    font-size: 30px;
+    font-weight: lighter;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    line-height: 50px;
+    letter-spacing: 10px;
+    word-spacing: 40px;
+    text-align: justify;
+    text-transform: capitalize;
+    text-decoration: underline;
+}
