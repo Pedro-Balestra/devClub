@@ -2,35 +2,37 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    height: 200vh;
-    width: 200vw;
 }
 
-.div-dad {
-    height: 350px;
-    width: 350px;
-    background-color: #FF1396;
-    /* position: absolute; */
-    top: 20px;
+/* input {
+    border: 1px solid red;
+    color: blue;
 }
 
-.div-son {
-    height: 150px;
-    width: 150px;
-    background-color: red;
-    /* position: absolute; */
-    /* position: sticky; */
-    left: 50px;
-    top: 50px;
+input::placeholder {
+    color: #FF1396;
 }
 
-.tananan {
-    height: 100px;
-    width: 100px;
-    background-color: blue;
-    /* position: relative; */
-    /* position: sticky; */
-    position: fixed;
-    left: 20px;
-    top: 20px;
+p {
+    color: blue;
+}
+
+p::first-letter {
+    color: red;
+}
+
+p::first-line {
+    color: burlywood;
+} */
+
+a {
+    color: blue;
+}
+
+a::before {
+    content: ">";
+}
+
+a::after {
+    content: "<";
 }
