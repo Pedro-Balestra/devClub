@@ -4,35 +4,16 @@
     box-sizing: border-box;
 }
 
-/* input {
-    border: 1px solid red;
-    color: blue;
+div {
+    height: 700px;
+    width: 700px;
+    background: blue;
 }
 
-input::placeholder {
-    color: #FF1396;
-}
-
-p {
-    color: blue;
-}
-
-p::first-letter {
-    color: red;
-}
-
-p::first-line {
-    color: burlywood;
-} */
-
-a {
-    color: blue;
-}
-
-a::before {
-    content: ">";
-}
-
-a::after {
-    content: "<";
+@media (max-width: 600px) {
+    div {
+        background: red;
+        height: 200px;
+        width: 200px;
+    }
 }
