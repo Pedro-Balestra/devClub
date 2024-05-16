@@ -74,11 +74,18 @@ p {
         margin-right: 15px;
         margin-top: 17px;
         margin-left: 0;
+        display: flex;
+        flex-direction: row-reverse;
     }
 
     main {
         display: flex;
         flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    section {
+        display: block;
     }
 
     .link-header {
@@ -95,13 +102,11 @@ p {
     h1 {
         font-size: 30px;
         line-height: 30px;
-        text-align: center;
         width: 278px;
         margin-top: 124px;
     }
 
     p {
-        text-align: center;
         font-size: 18px;
         line-height: 33px;
         width: 304px;
@@ -110,7 +115,8 @@ p {
     .link-section {
         font-size: 18px;
         line-height: normal;
-        margin-left: 139xp;
+        position: relative;
+        left: -100px;
     }
 
     .img-logo {
