@@ -1,7 +1,20 @@
-const myAge = 30
-const myCar = "Si"
+const pedro = {
+    name: "Pedro",
+    age: 24,
+    address:
+    {
+        street: "Rua ABC",
+        number: 123,
+        city: "MG",
+        state: "MG",
+        country: "Brasil"
+    }
+}
 
-const myString = `Minha idade é ${myAge}, ficando velho.
-Mas pelo menos estou andando de ${myCar}` // Template Literals / Template String
+console.log(pedro)
+console.log(pedro.name)
+console.log(pedro.address.street)
 
-console.log(myString);
+pedro.address.number = 1
+
+console.log(pedro.address.number)
