@@ -1,3 +1,10 @@
-const button = document.querySelector("h1")
+const input = document.querySelector("#main-input")
+const desafio = document.querySelector(".desafio")
 
-button.style.fontSize = "100px"
+function cliqueiNoBotao() {
+    desafio.innerHTML = `O valor digitado foi: ${input.value}`
+}
+
+function digiteiNoInput() {
+    console.log(input.value)
+}
