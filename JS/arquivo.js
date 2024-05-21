@@ -1,20 +1,8 @@
-const pedro = {
-    name: "Pedro",
-    age: 24,
-    address:
-    {
-        street: "Rua ABC",
-        number: 123,
-        city: "MG",
-        state: "MG",
-        country: "Brasil"
-    }
-}
+const myArray = [
+    20, 30, 490
+]
 
-console.log(pedro)
-console.log(pedro.name)
-console.log(pedro.address.street)
+myArray[2] = 454
 
-pedro.address.number = 1
+console.log(myArray);
 
-console.log(pedro.address.number)
