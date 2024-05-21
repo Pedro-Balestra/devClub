@@ -1,9 +1,3 @@
-const notaDoAluno = 3
-const notaDeCorte = 5
+const input = document.getElementById("main-input")
 
-if (notaDoAluno > notaDeCorte) {
-    console.log("Parabéns");
-}
-else {
-    console.log("Estude mais");
-}
+console.log(input);
