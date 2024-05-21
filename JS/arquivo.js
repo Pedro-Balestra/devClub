@@ -1,3 +1,4 @@
-const elements = document.querySelector("button")
+const elements = document.querySelectorAll("p")
 
 console.log(elements);
+
