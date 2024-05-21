@@ -1,10 +1,9 @@
 const input = document.querySelector("#main-input")
-const desafio = document.querySelector(".desafio")
+const select = document.querySelector("select")
+const button = document.querySelector(".main-button")
 
-function cliqueiNoBotao() {
-    desafio.innerHTML = `O valor digitado foi: ${input.value}`
+function troqueiDeValor() {
+    console.log(`troquei de valor para ${select.value}`)
 }
 
-function digiteiNoInput() {
-    console.log(input.value)
-}
+select.addEventListener("change", troqueiDeValor)
