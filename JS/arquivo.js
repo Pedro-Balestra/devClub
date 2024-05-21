@@ -1,3 +1,3 @@
-const elements = document.getElementsByTagName("h1")
+const elements = document.getElementsByName("nome-completo")
 
 console.log(elements);
