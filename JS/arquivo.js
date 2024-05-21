@@ -1,5 +1,3 @@
-const elements = document.querySelector(".paragraph-js")
+const button = document.querySelector("h1")
 
-console.log(elements.textContent) // Só HTML
-console.log(elements.innerText) // Leva em conta o CSS
-console.log(elements.innerHTML) // tras tudo -> Pernite adicionar HTML
+button.style.fontSize = "100px"
