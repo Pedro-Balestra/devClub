@@ -1,3 +1,3 @@
-const input = document.getElementById("main-input")
+const elements = document.getElementsByClassName("paragraph-js")
 
-console.log(input);
+console.log(elements);
