@@ -113,7 +113,7 @@ section {
 }
 
 .currency-value,
-.currency-value-to-convert {
+.currency-value-converted {
     color: #555;
     font-size: 20px;
     font-weight: 700;
