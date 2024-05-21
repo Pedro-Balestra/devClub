@@ -1,3 +1,3 @@
-const elements = document.getElementsByName("nome-completo")
+const elements = document.querySelector("button")
 
 console.log(elements);
