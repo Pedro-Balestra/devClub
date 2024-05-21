@@ -1,8 +1,9 @@
-const myArray = [
-    20, 30, 490
-]
+const notaDoAluno = 3
+const notaDeCorte = 5
 
-myArray[2] = 454
-
-console.log(myArray);
-
+if (notaDoAluno > notaDeCorte) {
+    console.log("Parabéns");
+}
+else {
+    console.log("Estude mais");
+}
