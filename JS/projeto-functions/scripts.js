@@ -14,7 +14,6 @@ const GAME_OPTIONS = {
     SCISSOR: "scissor",
 }
 
-
 function playHuman(humanChoice) {
     playTheGame(humanChoice, playMachine())
 }
