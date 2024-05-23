@@ -26,11 +26,11 @@ const searchInput = document.querySelector("input")
 const addParagraph = document.querySelector("p")
 
 function showContact() {
-    for (let i = 0; i < contacts.length; i++) {
-        if (contacts[i].name.toLocaleLowerCase() === searchInput.value.toLocaleLowerCase()) {
+    for (const contactsNames of contacts) {
+        if (contactsNames.name.toLocaleLowerCase() === searchInput.value.toLocaleLowerCase()) {
             return addParagraph.innerHTML = `O contato para 
-            ${contacts[i].name} é: <br> ${contacts[i].phone} 
-            ou ${contacts[i].email}`
+            ${contactsNames.name} é: <br> ${contactsNames.phone} 
+            ou ${contactsNames.email}`
         }
     }
     return alert("Contato não existe")
