@@ -2,12 +2,23 @@ const express = require('express')
 const port = 3000
 
 const app = express()
+app.use(express.json())
 
 /*
     - Query params => neusite.com/users?name=pedro&age=25 //Filtros
     - Route params => /users/2 //Buscar, Deletar ou atualizar algo especifico
 */
 
+app.get('/users', (request, response) => {
+    const { name, age } = request.body
+    return response.json(
+        {
+            name,
+            age
+        })
+})
+
+/*
 app.get('/users/:id', (request, response) => {
 
     const { id } = request.params
@@ -17,6 +28,7 @@ app.get('/users/:id', (request, response) => {
         }
     )
 })
+* /
 /*
 app.get('/users', (request, response) => {
 
