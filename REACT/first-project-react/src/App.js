@@ -1,13 +1,17 @@
 import React from "react";
-import './styles.css'
+import { Container, H1, P } from "./styles";
 
 //JSX
 const App = () => {
   const hello = "Hello React"
   return (
-    <div className="container">
-      <h1>{hello}</h1>
-    </div>
+    <Container>
+      <H1>{hello}</H1>
+      <P>Esse é um paragrafo</P>
+      <br></br>
+      <P>Esse é outro paragrafo</P>
+
+    </Container>
   )
 }
 
