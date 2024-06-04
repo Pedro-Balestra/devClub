@@ -1,7 +1,14 @@
 import React from "react";
+import './styles.css'
 
+//JSX
 const App = () => {
-  return <div>Hello World</div>
+  const hello = "Hello React"
+  return (
+    <div className="container">
+      <h1>{hello}</h1>
+    </div>
+  )
 }
 
 export default App
