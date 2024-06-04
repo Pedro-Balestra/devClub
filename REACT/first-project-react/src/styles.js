@@ -1,15 +1,29 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    background-color: red;
+    
+`;
+
+export const Image = styled.img`
+    
+`;
+
+export const ContainerItens = styled.div`
+
 `;
 
 export const H1 = styled.h1`
-    color: blue;
-    font-size: 20px;
+    
 `;
 
-export const P = styled.p`
-    color: purple;
-    font-size: 14px;
+export const InputLabel = styled.p`
+
+`;
+
+export const Input = styled.input`
+
+`;
+
+export const Button = styled.button`
+
 `;

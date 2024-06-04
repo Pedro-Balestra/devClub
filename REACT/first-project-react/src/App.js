@@ -1,16 +1,22 @@
 import React from "react";
-import { Container, H1, P } from "./styles";
+import { Container, H1, Image, Input, InputLabel, ContainerItens, Button } from "./styles";
 
 //JSX
 const App = () => {
-  const hello = "Hello React"
+
   return (
     <Container>
-      <H1>{hello}</H1>
-      <P>Esse é um paragrafo</P>
-      <br></br>
-      <P>Esse é outro paragrafo</P>
+      <Image />
+      <ContainerItens>
+        <H1>Olá!</H1>
+        <InputLabel>Nome</InputLabel>
+        <Input placeholder="Nome"></Input>
 
+        <InputLabel>Idade</InputLabel>
+        <Input placeholder="Idade"></Input>
+
+        <Button>Cadastrar</Button>
+      </ContainerItens>
     </Container>
   )
 }
