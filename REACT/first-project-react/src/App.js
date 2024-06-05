@@ -18,10 +18,13 @@ const App = () => {
   const inputAge = useRef()
 
   function addNewUser() {
-    setUser([...users, { id: Math.random, name: inputName.current.value, age: inputAge.current.value }])
+    setUser([...users, { id: Math.random(), name: inputName.current.value, age: inputAge.current.value }])
   }
 
-
+  function deleteUser(userId) {
+    const newUser = users.filter(user => user.id !== userId)
+    setUser(newUser)
+  }
 
 
   return (
@@ -42,7 +45,7 @@ const App = () => {
 
               <User key={user.id}>
                 <p>{user.name}</p> <p>{user.age}</p>
-                <button><img alt="lata-de-lixo" src={Trash}></img></button>
+                <button onClick={() => deleteUser(user.id)}><img alt="lata-de-lixo" src={Trash}></img></button>
               </User>
             ))
           }
