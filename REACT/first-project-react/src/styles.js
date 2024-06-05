@@ -91,4 +91,11 @@ export const Button = styled.button`
     align-items: center;
     justify-content: center;
     gap: 20px;
+
+    &:hover{
+        opacity: 0.8;
+    }
+    &:active{
+        opacity: 0.5;
+    }
 `;

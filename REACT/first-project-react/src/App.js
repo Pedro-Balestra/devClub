@@ -6,6 +6,11 @@ import Arrow from "./assets/arrow.svg"
 //JSX
 const App = () => {
 
+  const users = [
+    { id: Math.random(), name: "Pedro", age: 25 },
+    { id: Math.random(), name: "Maria", age: 21 },
+  ];
+
   return (
     <Container>
       <Image alt="logo-imagem" src={People} />
@@ -18,6 +23,16 @@ const App = () => {
         <Input placeholder="Idade"></Input>
 
         <Button>Cadastrar <img alt="seta" src={Arrow} /></Button>
+        <ul>
+          {
+            users.map(user => (
+
+              <li key={user.id}>
+                {user.name} - {user.age}
+              </li>
+            ))
+          }
+        </ul>
       </ContainerItens>
     </Container>
   )
