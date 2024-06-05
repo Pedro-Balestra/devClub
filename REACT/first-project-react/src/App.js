@@ -1,15 +1,24 @@
-import React from "react";
-import { Container, H1, Image, Input, InputLabel, ContainerItens, Button } from "./styles";
+import React, { useState } from "react";
+import { Container, H1, Image, Input, InputLabel, ContainerItens, Button, User } from "./styles";
 import People from "./assets/people.svg"
 import Arrow from "./assets/arrow.svg"
+import Trash from "./assets/trash.svg"
+
 
 //JSX
 const App = () => {
 
-  const users = [
-    { id: Math.random(), name: "Pedro", age: 25 },
-    { id: Math.random(), name: "Maria", age: 21 },
-  ];
+  //const users = [];
+  //ESTADO => variavel
+  //REACT HOOKS => FERRAMENTAS AUXOLIARES
+  //Um estado no react é IMUTAVEL
+
+  const [users, setUser] = useState([]);
+
+  function addNewUser() {
+    setUser([{ id: Math.random(), name: "Pedro", age: 25 }])
+  }
+
 
   return (
     <Container>
@@ -22,14 +31,15 @@ const App = () => {
         <InputLabel>Idade</InputLabel>
         <Input placeholder="Idade"></Input>
 
-        <Button>Cadastrar <img alt="seta" src={Arrow} /></Button>
+        <Button onClick={addNewUser}>Cadastrar <img alt="seta" src={Arrow} /></Button>
         <ul>
           {
             users.map(user => (
 
-              <li key={user.id}>
-                {user.name} - {user.age}
-              </li>
+              <User key={user.id}>
+                <p>{user.name}</p> <p>{user.age}</p>
+                <button><img alt="lata-de-lixo" src={Trash}></img></button>
+              </User>
             ))
           }
         </ul>

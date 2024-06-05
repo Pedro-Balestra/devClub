@@ -91,6 +91,7 @@ export const Button = styled.button`
     align-items: center;
     justify-content: center;
     gap: 20px;
+    transition: 0.5s;
 
     &:hover{
         opacity: 0.8;
@@ -98,4 +99,35 @@ export const Button = styled.button`
     &:active{
         opacity: 0.5;
     }
+`;
+
+export const User = styled.li`
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    width: 342px;
+    height: 58px;
+    border: none;
+    outline: none;
+
+    margin-top: 20px;
+
+    p{
+        color: #FFF;
+        font-size: 20px;
+        font-style: normal;
+        line-height: normal;
+    }
+
+    button{
+        background: none ;
+        border: none;
+        cursor: pointer;
+    }
+    
 `;
