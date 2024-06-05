@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Container, H1, Image, Input, InputLabel, ContainerItens, Button, User } from "./styles";
 import People from "./assets/people.svg"
 import Arrow from "./assets/arrow.svg"
@@ -14,20 +14,14 @@ const App = () => {
   //Um estado no react é IMUTAVEL
 
   const [users, setUser] = useState([]);
-  const [name, setName] = useState();
-  const [age, setAge] = useState();
+  const inputName = useRef()
+  const inputAge = useRef()
 
   function addNewUser() {
-    setUser([...users, { id: Math.random, name, age }])
+    setUser([...users, { id: Math.random, name: inputName.current.value, age: inputAge.current.value }])
   }
 
-  function changeInputName(event) {
-    setName(event.target.value)
-  }
 
-  function changeInputAge(event) {
-    setAge(event.target.value)
-  }
 
 
   return (
@@ -36,10 +30,10 @@ const App = () => {
       <ContainerItens>
         <H1>Olá!</H1>
         <InputLabel>Nome</InputLabel>
-        <Input onChange={changeInputName} placeholder="Nome"></Input>
+        <Input ref={inputName} placeholder="Nome"></Input>
 
         <InputLabel>Idade</InputLabel>
-        <Input onChange={changeInputAge} placeholder="Idade"></Input>
+        <Input ref={inputAge} placeholder="Idade"></Input>
 
         <Button onClick={addNewUser}>Cadastrar <img alt="seta" src={Arrow} /></Button>
         <ul>
