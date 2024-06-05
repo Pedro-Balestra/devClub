@@ -1,9 +1,12 @@
-const express = require('express')
-const uuid = require('uuid')
-const port = 3000
+import express from 'express';
+import { v4 } from 'uuid';
+import cors from 'cors'
+
+const port = 3001
 
 const app = express()
 app.use(express.json())
+app.use(cors())
 
 /*
     - Query params => neusite.com/users?name=pedro&age=25 //Filtros
@@ -39,7 +42,7 @@ app.get('/users', (request, response) => {
 app.post('/users', (request, response) => {
     const { name, age } = request.body
     const user = {
-        id: uuid.v4(), name, age
+        id: v4(), name, age
     }
     users.push(user)
     return response.status(201).json(user)
