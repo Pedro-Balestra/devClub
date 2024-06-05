@@ -14,9 +14,19 @@ const App = () => {
   //Um estado no react é IMUTAVEL
 
   const [users, setUser] = useState([]);
+  const [name, setName] = useState();
+  const [age, setAge] = useState();
 
   function addNewUser() {
-    setUser([{ id: Math.random(), name: "Pedro", age: 25 }])
+    setUser([{ id: Math.random, name, age }])
+  }
+
+  function changeInputName(event) {
+    setName(event.target.value)
+  }
+
+  function changeInputAge(event) {
+    setAge(event.target.value)
   }
 
 
@@ -26,10 +36,10 @@ const App = () => {
       <ContainerItens>
         <H1>Olá!</H1>
         <InputLabel>Nome</InputLabel>
-        <Input placeholder="Nome"></Input>
+        <Input onChange={changeInputName} placeholder="Nome"></Input>
 
         <InputLabel>Idade</InputLabel>
-        <Input placeholder="Idade"></Input>
+        <Input onChange={changeInputAge} placeholder="Idade"></Input>
 
         <Button onClick={addNewUser}>Cadastrar <img alt="seta" src={Arrow} /></Button>
         <ul>
