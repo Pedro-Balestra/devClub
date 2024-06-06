@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Container, H1, Image, Input, InputLabel, ContainerItens, Button, User } from "./styles";
 import People from "./assets/people.svg"
 import Arrow from "./assets/arrow.svg"
@@ -19,16 +19,25 @@ const App = () => {
   const inputAge = useRef()
 
   async function addNewUser() {
-    /*const { data: newUser } = await axios.post('http://localhost:3001/users', {
+    const { data: newUser } = await axios.post('http://localhost:3001/users', {
       name: inputName.current.value, age: inputAge.current.value
     })
     console.log(newUser);
-    setUser([...users, newUser])*/
+    setUser([...users, newUser])
 
-    const { data: newUser } = await axios.get('http://localhost:3001/users')
 
-    setUser(newUser)
   }
+  //  UseEffect (Efeito Colateral)
+  // A minha aplicação inicia (A pagina carregou, useEffect é chamado)
+  // Quando um estado que esta no array de dependencia do useEffect é alterado
+  useEffect(() => {
+    async function fectchUsers() {
+      const { data: newUser } = await axios.get('http://localhost:3001/users')
+
+      setUser(newUser)
+    }
+    fectchUsers()
+  }, [users])
 
   function deleteUser(userId) {
     const newUser = users.filter(user => user.id !== userId)
