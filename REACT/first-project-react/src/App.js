@@ -19,11 +19,15 @@ const App = () => {
   const inputAge = useRef()
 
   async function addNewUser() {
-    const { data: newUser } = await axios.post('http://localhost:3001/users', {
+    /*const { data: newUser } = await axios.post('http://localhost:3001/users', {
       name: inputName.current.value, age: inputAge.current.value
     })
     console.log(newUser);
-    setUser([...users, newUser])
+    setUser([...users, newUser])*/
+
+    const { data: newUser } = await axios.get('http://localhost:3001/users')
+
+    setUser(newUser)
   }
 
   function deleteUser(userId) {
