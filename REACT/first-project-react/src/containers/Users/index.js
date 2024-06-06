@@ -1,13 +1,13 @@
-import React, { useState, useRef, useEffect } from "react";
-import { Container, H1, Image, Input, InputLabel, ContainerItens, Button, User } from "./styles";
-import People from "../../assets/people.svg"
+import React, { useState, useEffect } from "react";
+import { Container, H1, Image, ContainerItens, Button, User } from "./styles";
+import Avatar from "../../assets/avatar.svg"
 import Arrow from "../../assets/arrow.svg"
 import Trash from "../../assets/trash.svg"
 import axios from "axios"
 
 
 //JSX
-const App = () => {
+const Users = () => {
 
   //const users = [];
   //ESTADO => variavel
@@ -15,18 +15,7 @@ const App = () => {
   //Um estado no react é IMUTAVEL
 
   const [users, setUser] = useState([]);
-  const inputName = useRef()
-  const inputAge = useRef()
 
-  async function addNewUser() {
-    const { data: newUser } = await axios.post('http://localhost:3001/users', {
-      name: inputName.current.value, age: inputAge.current.value
-    })
-    console.log(newUser);
-    setUser([...users, newUser])
-
-
-  }
   //  UseEffect (Efeito Colateral)
   // A minha aplicação inicia (A pagina carregou, useEffect é chamado)
   // Quando um estado que esta no array de dependencia do useEffect é alterado
@@ -48,16 +37,9 @@ const App = () => {
 
   return (
     <Container>
-      <Image alt="logo-imagem" src={People} />
+      <Image alt="logo-imagem" src={Avatar} />
       <ContainerItens>
-        <H1>Olá!</H1>
-        <InputLabel>Nome</InputLabel>
-        <Input ref={inputName} placeholder="Nome"></Input>
-
-        <InputLabel>Idade</InputLabel>
-        <Input ref={inputAge} placeholder="Idade"></Input>
-
-        <Button onClick={addNewUser}>Cadastrar <img alt="seta" src={Arrow} /></Button>
+        <H1>Usuários</H1>
         <ul>
           {
             users.map(user => (
@@ -69,9 +51,10 @@ const App = () => {
             ))
           }
         </ul>
+        <Button ><img alt="seta" src={Arrow} />Voltar </Button>
       </ContainerItens>
     </Container>
   )
 }
 
-export default App
+export default Users

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Background from '../../assets/background.svg'
+import Background from '../../assets/background1.svg'
 
 export const Container = styled.div`
     background: url("${Background}");
@@ -29,6 +29,7 @@ export const ContainerItens = styled.div`
         display: flex;
         flex-direction: column;
     height: 100vh;
+    backdrop-filter: blur(22.5px);
 
 `;
 
@@ -42,42 +43,14 @@ export const H1 = styled.h1`
     margin-bottom: 40px;
 `;
 
-export const InputLabel = styled.p`
-    color: #EEE;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 22px; 
-    letter-spacing: -0.408px;
-    margin-left: 25px;
-`;
-
-export const Input = styled.input`
-    border-radius: 14px;
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
-    width: 342px;
-    height: 58px;
-    border: none;
-    outline: none;
-    padding-left: 25px;
-
-    color: #FFF;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    
-    margin-bottom: 25px;
-`;
-
 export const Button = styled.button`
     width: 342px;
     height: 74px;
+    margin-top: 120px;
     border-radius: 14px;
-    background: rgba(0, 0, 0, 0.80);
-    border: none;
+
+    background: transparent;
+    border: 1px solid #fff;
 
     color: #FFF;
     font-size: 17px;
@@ -98,6 +71,10 @@ export const Button = styled.button`
     }
     &:active{
         opacity: 0.5;
+    }
+
+    img{
+        transform: rotateY(180deg);
     }
 `;
 
