@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Container, H1, Image, ContainerItens, Button, User } from "./styles";
+import { Container, Image, Button, User } from "./styles";
 import Avatar from "../../assets/avatar.svg"
 import Arrow from "../../assets/arrow.svg"
 import Trash from "../../assets/trash.svg"
 import axios from "axios"
 import { useHistory } from "react-router-dom";
+import H1 from "../../components/Title";
+import ContainerItens from "../../components/ContainerItens";
 
 //JSX
 const Users = () => {
@@ -42,7 +44,7 @@ const Users = () => {
   return (
     <Container>
       <Image alt="logo-imagem" src={Avatar} />
-      <ContainerItens>
+      <ContainerItens isBlur={true}>
         <H1>Usuários</H1>
         <ul>
           {
