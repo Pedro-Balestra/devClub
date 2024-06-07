@@ -1,11 +1,12 @@
 import React, { useState, useRef } from "react";
-import { Container, Image, Input, InputLabel, Button } from "./styles";
+import { Container, Image, Input, InputLabel } from "./styles";
 import People from "../../assets/people.svg"
 import Arrow from "../../assets/arrow.svg"
 import axios from "axios"
 import { useHistory } from "react-router-dom";
 import H1 from "../../components/Title";
 import ContainerItens from "../../components/ContainerItens";
+import Button from "../../components/Button";
 
 
 //JSX
