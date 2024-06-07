@@ -6,6 +6,7 @@ import Trash from "../../assets/trash.svg"
 import axios from "axios"
 
 
+
 //JSX
 const Users = () => {
 
@@ -51,7 +52,7 @@ const Users = () => {
             ))
           }
         </ul>
-        <Button ><img alt="seta" src={Arrow} />Voltar </Button>
+        <Button to="/"><img alt="seta" src={Arrow} />Voltar </Button>
       </ContainerItens>
     </Container>
   )

@@ -38,7 +38,7 @@ const App = () => {
         <InputLabel>Idade</InputLabel>
         <Input ref={inputAge} placeholder="Idade"></Input>
 
-        <Button onClick={addNewUser}>Cadastrar <img alt="seta" src={Arrow} /></Button>
+        <Button to="/usuarios" onClick={addNewUser}>Cadastrar <img alt="seta" src={Arrow} /></Button>
       </ContainerItens>
     </Container>
   )
