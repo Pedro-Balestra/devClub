@@ -4,8 +4,7 @@ import Avatar from "../../assets/avatar.svg"
 import Arrow from "../../assets/arrow.svg"
 import Trash from "../../assets/trash.svg"
 import axios from "axios"
-
-
+import { useHistory } from "react-router-dom";
 
 //JSX
 const Users = () => {
@@ -16,6 +15,7 @@ const Users = () => {
   //Um estado no react é IMUTAVEL
 
   const [users, setUser] = useState([]);
+  const history = useHistory()
 
   //  UseEffect (Efeito Colateral)
   // A minha aplicação inicia (A pagina carregou, useEffect é chamado)
@@ -35,6 +35,9 @@ const Users = () => {
     setUser(newUser)
   }
 
+  function goBackPage() {
+    history.push("/")
+  }
 
   return (
     <Container>
@@ -52,7 +55,7 @@ const Users = () => {
             ))
           }
         </ul>
-        <Button to="/"><img alt="seta" src={Arrow} />Voltar </Button>
+        <Button onClick={goBackPage} ><img alt="seta" src={Arrow} />Voltar </Button>
       </ContainerItens>
     </Container>
   )
