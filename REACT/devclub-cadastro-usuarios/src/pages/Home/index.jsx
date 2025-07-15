@@ -1,9 +1,8 @@
 import { useRef } from "react";
 import UserImage from "../../assets/users.png";
-
+import { DefaultButton } from "../../components/Button";
 import api from "../../services/api";
 import {
-  Button,
   Container,
   ContainerInputs,
   Form,
@@ -61,9 +60,9 @@ export function Home() {
             ref={inputEmail}
           />
         </div>
-        <Button type="button" onClick={registerNewUser}>
+        <DefaultButton type="button" onClick={registerNewUser}>
           Cadastrar usuário
-        </Button>
+        </DefaultButton>
       </Form>
     </Container>
   );
