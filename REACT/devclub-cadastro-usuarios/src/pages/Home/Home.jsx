@@ -1,3 +1,4 @@
+import UserImage from "../../assets/users.png";
 import {
   Button,
   Container,
@@ -6,12 +7,9 @@ import {
   Input,
   InputLabel,
   Title,
-  TopBackground
+  TopBackground,
 } from "./styles";
-
-import UserImage from './assets/users.png';
 export function Home() {
-
   return (
     <Container>
       <TopBackground>
@@ -20,25 +18,29 @@ export function Home() {
       <Form>
         <Title>Cadastrar usuário</Title>
         <ContainerInputs>
-
           <div>
-            <InputLabel>Nome<span> *</span></InputLabel>
-            <Input type="text" placeholder='Nome do Usuário' />
+            <InputLabel>
+              Nome<span> *</span>
+            </InputLabel>
+            <Input type="text" placeholder="Nome do Usuário" />
           </div>
           <div>
-            <InputLabel>Idade<span> *</span></InputLabel>
+            <InputLabel>
+              Idade<span> *</span>
+            </InputLabel>
             <Input type="number" placeholder="Idade do Usuário" />
           </div>
-
         </ContainerInputs>
-        <div style={{ width: '100%' }}>
-          <InputLabel>E-mail<span> *</span></InputLabel>
+        <div style={{ width: "100%" }}>
+          <InputLabel>
+            E-mail<span> *</span>
+          </InputLabel>
           <Input type="email" placeholder="E-mail do Usuário" />
         </div>
         <Button>Cadastrar usuário</Button>
       </Form>
     </Container>
-  )
+  );
 }
 
 /*
