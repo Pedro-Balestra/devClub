@@ -1,4 +1,6 @@
+import { useRef } from "react";
 import UserImage from "../../assets/users.png";
+
 import {
   Button,
   Container,
@@ -10,6 +12,14 @@ import {
   TopBackground,
 } from "./styles";
 export function Home() {
+  const inputName = useRef();
+  const inputAge = useRef();
+  const inputEmail = useRef();
+
+  function registerNewUser() {
+    console.log(inputName.current.value);
+  }
+
   return (
     <Container>
       <TopBackground>
@@ -22,22 +32,32 @@ export function Home() {
             <InputLabel>
               Nome<span> *</span>
             </InputLabel>
-            <Input type="text" placeholder="Nome do Usuário" />
+            <Input type="text" placeholder="Nome do Usuário" ref={inputName} />
           </div>
           <div>
             <InputLabel>
               Idade<span> *</span>
             </InputLabel>
-            <Input type="number" placeholder="Idade do Usuário" />
+            <Input
+              type="number"
+              placeholder="Idade do Usuário"
+              ref={inputAge}
+            />
           </div>
         </ContainerInputs>
         <div style={{ width: "100%" }}>
           <InputLabel>
             E-mail<span> *</span>
           </InputLabel>
-          <Input type="email" placeholder="E-mail do Usuário" />
+          <Input
+            type="email"
+            placeholder="E-mail do Usuário"
+            ref={inputEmail}
+          />
         </div>
-        <Button>Cadastrar usuário</Button>
+        <Button type="button" onClick={registerNewUser}>
+          Cadastrar usuário
+        </Button>
       </Form>
     </Container>
   );
