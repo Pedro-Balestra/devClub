@@ -23,6 +23,11 @@ export function ListUsers() {
     }
     getUsers();
   }, []);
+
+  async function deleteUser(id) {
+    await api.delete(`/usuarios/${id}`);
+    setUsers(users.filter((user) => user.id !== id));
+  }
   return (
     <DefaultBackGround>
       <DefaultTopBackGround />
@@ -38,11 +43,19 @@ export function ListUsers() {
               <p>{user.age}</p>
               <p>{user.email}</p>
             </div>
-            <TrashIcon src={Trash} alt="icone-lixo" />
+            <TrashIcon
+              src={Trash}
+              alt="icone-lixo"
+              onClick={() => {
+                deleteUser(user.id);
+              }}
+            />
           </CardUsers>
         ))}
       </ContainerUsers>
-      <DefaultButton onClick={() => navigate("/")}>Voltar</DefaultButton>
+      <DefaultButton type="button" onClick={() => navigate("/")}>
+        Voltar
+      </DefaultButton>
     </DefaultBackGround>
   );
 }
