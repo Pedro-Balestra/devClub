@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import UserImage from "../../assets/users.png";
 import { DefaultBackGround, DefaultButton } from "../../components";
 import api from "../../services/api";
@@ -14,6 +15,8 @@ export function Home() {
   const inputName = useRef();
   const inputAge = useRef();
   const inputEmail = useRef();
+
+  const navigate = useNavigate();
 
   async function registerNewUser() {
     const data = await api.post("/usuarios", {
@@ -63,7 +66,12 @@ export function Home() {
           Cadastrar usuário
         </DefaultButton>
       </Form>
-      <DefaultButton type="button">Ver lista de usuários</DefaultButton>
+      <DefaultButton
+        type="button"
+        onClick={() => navigate("/lista-de-usuarios")}
+      >
+        Ver lista de usuários
+      </DefaultButton>
     </DefaultBackGround>
   );
 }
