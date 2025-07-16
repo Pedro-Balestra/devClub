@@ -22,7 +22,7 @@ export function ListUsers() {
       <DefaultBackGround>
         <h1>List</h1>
         {users.map((user) => (
-          <div>
+          <div key={user.id}>
             <p>{user.name}</p>
             <p>{user.age}</p>
             <p>{user.email}</p>
