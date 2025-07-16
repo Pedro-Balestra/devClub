@@ -1,9 +1,8 @@
 import { useRef } from "react";
 import UserImage from "../../assets/users.png";
-import { DefaultButton } from "../../components/Button";
+import { DefaultBackGround, DefaultButton } from "../../components";
 import api from "../../services/api";
 import {
-  Container,
   ContainerInputs,
   Form,
   Input,
@@ -26,7 +25,7 @@ export function Home() {
   }
 
   return (
-    <Container>
+    <DefaultBackGround>
       <TopBackground>
         <img src={UserImage} alt="imagem-usuarios" />
       </TopBackground>
@@ -60,11 +59,12 @@ export function Home() {
             ref={inputEmail}
           />
         </div>
-        <DefaultButton type="button" onClick={registerNewUser}>
+        <DefaultButton type="button" onClick={registerNewUser} theme="primary">
           Cadastrar usuário
         </DefaultButton>
       </Form>
-    </Container>
+      <DefaultButton type="button">Ver lista de usuários</DefaultButton>
+    </DefaultBackGround>
   );
 }
 

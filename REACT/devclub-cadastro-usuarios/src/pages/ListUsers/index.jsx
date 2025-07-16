@@ -1,10 +1,13 @@
 import { DefaultButton } from "../../components";
+import { DefaultBackGround } from "../../components/BackGround";
 
 export function ListUsers() {
   return (
     <div>
-      <h1>ListUsers</h1>
-      <DefaultButton>Voltar</DefaultButton>
+      <DefaultBackGround>
+        <h1>ListUsers</h1>
+        <DefaultButton>Voltar</DefaultButton>
+      </DefaultBackGround>
     </div>
   );
 }

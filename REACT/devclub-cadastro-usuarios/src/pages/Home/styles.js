@@ -1,13 +1,5 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 100vh;
-  background-color: #181f36;
-`;
 export const TopBackground = styled.div`
   background: linear-gradient(to right, #fe7e5d, #7f3841);
   height: 30vh;
