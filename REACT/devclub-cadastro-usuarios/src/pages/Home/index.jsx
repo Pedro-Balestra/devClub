@@ -1,16 +1,13 @@
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import UserImage from "../../assets/users.png";
-import { DefaultBackGround, DefaultButton } from "../../components";
-import api from "../../services/api";
 import {
-  ContainerInputs,
-  Form,
-  Input,
-  InputLabel,
-  Title,
-  TopBackground,
-} from "./styles";
+  DefaultBackGround,
+  DefaultButton,
+  DefaultTitle,
+  DefaultTopBackGround,
+} from "../../components";
+import api from "../../services/api";
+import { ContainerInputs, Form, Input, InputLabel } from "./styles";
 export function Home() {
   const inputName = useRef();
   const inputAge = useRef();
@@ -29,11 +26,9 @@ export function Home() {
 
   return (
     <DefaultBackGround>
-      <TopBackground>
-        <img src={UserImage} alt="imagem-usuarios" />
-      </TopBackground>
+      <DefaultTopBackGround />
       <Form>
-        <Title>Cadastrar usuário</Title>
+        <DefaultTitle>Cadastrar usuário</DefaultTitle>
         <ContainerInputs>
           <div>
             <InputLabel>
