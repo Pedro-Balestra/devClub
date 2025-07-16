@@ -1,5 +1,5 @@
 import { Background } from "./styles";
 
-export function DefaultBackGround({ ...props }) {
-  return <Background {...props}></Background>;
+export function DefaultBackGround({ children, ...props }) {
+  return <Background {...props}>{children}</Background>;
 }
